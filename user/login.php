@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Responsive Registration Form | CodingLab </title>
+    <title> Login Form</title>
     <link rel="stylesheet" href="./css/register.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&amp;display=swap"
         rel="stylesheet">
@@ -21,17 +21,39 @@
         <div class="title">Login</div>
         <div class="content">
             <!-- Registration form -->
-            <form action="#">
+            <?php
+            include("../admin/pages/connectdb.php");
+            session_start();
+            if (isset($_POST['loginBtn'])) {
+                $email = $_POST['email'];
+                $pass = $_POST['pass'];
+
+                $q = mysqli_query($conn, "SELECT * FROM register WHERE email='$email' AND password='$pass'");
+
+                if (mysqli_num_rows($q) > 0) {
+                    $row = mysqli_fetch_assoc($q);
+                    $_SESSION['uid'] = $row['uid']; // or use email
+                    $_SESSION['username'] = $row['username']; // or use email
+                    $_SESSION['email'] = $row['email']; // or use email
+                    $_SESSION['pnumber'] = $row['pnumber']; // or use email
+                    echo '<script>window.location.href="index.php";</script>';
+                } else {
+                    echo '<script>alert("Email or password is incorrect...");</script>';
+                }
+            }
+            ?>
+
+            <form method="post">
                 <div class="user-details">
                     <!-- Input for Email -->
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="text" placeholder="Enter your email" required>
+                        <input type="text" name="email" placeholder="Enter your email" required>
                     </div>
                     <!-- Input for Password -->
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="text" placeholder="Enter your password" required>
+                        <input type="text" name="pass" placeholder="Enter your password" required>
                     </div>
                 </div>
                 <div class="regLink">

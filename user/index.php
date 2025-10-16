@@ -43,7 +43,7 @@
                     <div class="hero-text">
                         <span>FITNESS ELEMENTS</span>
                         <h1>BeastX Fitness</h1>
-                        <p>Gutim comes packed with the user-friendly BMI Calculator<br /> shortcode which lets</p>
+                        <!-- <p>Gutim comes packed with the user-friendly BMI Calculator<br /> shortcode which lets</p> -->
                         <a href="#" class="primary-btn">Read More</a>
                     </div>
                 </div>
@@ -140,40 +140,34 @@
                 </div>
             </div>
             <div class="row">
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-trainer-item">
-                        <img src="img/product-images/Elliptical.jpg" alt="Elliptical">
-                        <div class="trainer-text nm">
-                            <h5>Elliptical</h5>
-                            <p class="card-text">Unlock powerful time-saving tools for creating beautiful websites.</p>
-                            <button class="primary-btn" style="border: none;"><a href="product.php" style="text-decoration: none; color: white;">See Details</a></button>
+
+                <?php
+                include("../admin/pages/connectdb.php");
+                $catname = "";
+                $q = mysqli_query($conn, "select * from product_master limit 3");
+                while ($row = mysqli_fetch_array($q)) {
+                    if ($row['cid'] == 1) {
+                        $catname = "Protein-Powders";
+                    } elseif ($row['cid'] == 2) {
+                        $catname = "Gym-Equipment";
+                    } else {
+                        $catname = "Gym-Apparel";
+                    }
+                ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-trainer-item">
+                            <img src="../admin/pages/images/product/<?php echo $catname; ?>/<?php echo $row['photo'] ?>">
+
+                            <div class="trainer-text nm">
+                                <h5><?php echo $row['pname'] ?></h5>
+                                <p class="card-text"><?php echo $row['pdesc'] ?></p>
+                                <button class="primary-btn" style="border: none;"><a href="product.php"
+                                        style="text-decoration: none; color: white;">See Details</a></button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-trainer-item">
-                        <img src="img/product-images/GymClothingKit-1.jpg" alt="GymClothingKit">
-                        <div class="trainer-text nm">
-                            <h5>Gym Clothing Kit</h5>
-                            <p class="card-text">Unlock powerful time-saving tools for creating beautiful websites.</p>
-                            <button class="primary-btn" style="border: none;"><a href="product.php" style="text-decoration: none; color: white;">See Details</a></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-trainer-item">
-                        <img src="img/product-images/The-CLEAR-pre-workout.jpg" alt="The CLEAR Pre Workout">
-                        <div class="trainer-text nm">
-                            <h5>The Clear Pre Workout</h5>
-                            <p class="card-text">Unlock powerful time-saving tools for creating beautiful websites.</p>
-                            <button class="primary-btn" style="border: none;"><a href="product.php" style="text-decoration: none; color: white;">See Details</a></button>
-                        </div>
-                    </div>
-                </div>
-
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -190,57 +184,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-trainer-item">
-                        <img src="img/trainer/trainer-1.jpg" alt="">
-                        <div class="trainer-text">
-                            <h5>Patrick Cortez</h5>
-                            <span>Leader</span>
-                            <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                                voluptatem.</p>
-                            <div class="trainer-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <?php
+                $q = "select * from trainer_master limit 3";
+                $result = mysqli_query($conn, $q);
+                while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-trainer-item">
+                            <img src="../admin/pages/images/trainer/<?php echo $row['photo'] ?>" alt="">
+                            <div class="trainer-text">
+                                <h5><?php echo $row['tname'] ?></h5>
+                                <span><?php echo $row['trole'] ?></span>
+                                <p><?php echo $row['tdesc'] ?></p>
+                                <div class="trainer-social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-trainer-item">
-                        <img src="img/trainer/trainer-2.jpg" alt="">
-                        <div class="trainer-text">
-                            <h5>Gregory Powers</h5>
-                            <span>Gym coach</span>
-                            <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                                voluptatem.</p>
-                            <div class="trainer-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-trainer-item">
-                        <img src="img/trainer/trainer-3.jpg" alt="">
-                        <div class="trainer-text">
-                            <h5>Walter Wagner</h5>
-                            <span>Dance trainer</span>
-                            <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                                voluptatem.</p>
-                            <div class="trainer-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -333,7 +298,10 @@
                             <h4>Basic</h4>
                             <div class="triangle"></div>
                         </div>
-                        <h2 class="mi-price">$17<span>/01 mo</span></h2>
+                        <h2 class="mi-price">
+                            ₹500
+                            <span>/01 month</span>
+                        </h2>
                         <ul>
                             <li>
                                 <p>Duration</p>
@@ -352,7 +320,18 @@
                                 <span>Unlimited</span>
                             </li>
                         </ul>
-                        <a href="#" class="primary-btn membership-btn">Start Now</a>
+                        <?php
+                        if (session_status() === PHP_SESSION_NONE) {
+                            session_start();
+                        }
+
+                        if (!isset($_SESSION['uid'])) {
+                            echo '<a href="login.php" class="primary-btn membership-btn">Purchase</a>';
+                        } else {
+                            echo '<a href="membership.php?plan=Basic&price=500" class="primary-btn membership-btn">Purchase</a>';
+                        }
+                        ?>
+                        <!-- <a href="membership.php?plan=Basic&price=500" class="primary-btn membership-btn">Purchase</a> -->
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -361,7 +340,7 @@
                             <h4>Standard</h4>
                             <div class="triangle"></div>
                         </div>
-                        <h2 class="mi-price">$57<span>/01 mo</span></h2>
+                        <h2 class="mi-price">₹1000<span>/01 mo</span></h2>
                         <ul>
                             <li>
                                 <p>Duration</p>
@@ -380,7 +359,17 @@
                                 <span>Unlimited</span>
                             </li>
                         </ul>
-                        <a href="#" class="primary-btn membership-btn">Start Now</a>
+                        <?php
+                        if (session_status() === PHP_SESSION_NONE) {
+                            session_start();
+                        }
+
+                        if (!isset($_SESSION['uid'])) {
+                            echo '<a href="login.php" class="primary-btn membership-btn">Purchase</a>';
+                        } else {
+                            echo '<a href="membership.php?plan=Standard&price=1000" class="primary-btn membership-btn">Purchase</a>';
+                        }
+                        ?>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -389,7 +378,7 @@
                             <h4>Premium</h4>
                             <div class="triangle"></div>
                         </div>
-                        <h2 class="mi-price">$98<span>/01 mo</span></h2>
+                        <h2 class="mi-price">₹2000<span>/01 mo</span></h2>
                         <ul>
                             <li>
                                 <p>Duration</p>
@@ -408,7 +397,16 @@
                                 <span>Unlimited</span>
                             </li>
                         </ul>
-                        <a href="#" class="primary-btn membership-btn">Start Now</a>
+                        <?php
+                        if (session_status() === PHP_SESSION_NONE) {
+                            session_start();
+                        }
+                        if (!isset($_SESSION['uid'])) {
+                            echo '<a href="login.php" class="primary-btn membership-btn">Purchase</a>';
+                        } else {
+                            echo '<a href="membership.php?plan=Premium&price=2000" class="primary-btn membership-btn">Purchase</a>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

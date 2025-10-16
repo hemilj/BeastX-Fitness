@@ -27,14 +27,14 @@ include("header.php");
 </div>
 
 <!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="img/footer-banner/footer-banner-1.jpg">
+<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb/classes-breadcrumb.jpg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-text">
                     <h2>Contact</h2>
                     <div class="breadcrumb-option">
-                        <a href="index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="index.php"><i class="fa fa-home"></i> Home</a>
                         <span>Contact</span>
                     </div>
                 </div>
@@ -52,33 +52,36 @@ include("header.php");
                 <div class="contact-info">
                     <h4>Contacts Us</h4>
                     <div class="contact-address">
-                        <div class="ca-widget">
+                        <!-- <div class="ca-widget"> -->
                             <div class="cw-icon">
                                 <img src="img/icon/icon-1.png" alt="">
                             </div>
+                            <div style="padding-bottom: 10px;"></div>
                             <div class="cw-text">
                                 <h5>Our Location</h5>
-                                <p>60-49 Road 11378 New York</p>
-                            </div>
-                        </div>
-                        <div class="ca-widget">
+                                <p> BeastX Fitness,Opp.Jalaram Restaurant , Udhna .</p>
+                            </div><hr>
+                        <!-- </div> -->
+                        <!-- <div class="ca-widget"> -->
                             <div class="cw-icon">
                                 <img src="img/icon/icon-2.png" alt="">
                             </div>
+                            <div style="padding-bottom: 10px;"></div>
                             <div class="cw-text">
                                 <h5>Phone:</h5>
-                                <p>+65 11.188.888</p>
-                            </div>
-                        </div>
-                        <div class="ca-widget">
+                                <p>+91 987456321</p>
+                            </div><hr>
+                        <!-- </div> -->
+                        <!-- <div class="ca-widget"> -->
                             <div class="cw-icon">
                                 <img src="img/icon/icon-3.png" alt="">
                             </div>
+                            <div style="padding-bottom: 10px;"></div>
                             <div class="cw-text">
                                 <h5>Mail</h5>
-                                <p>hellocolorlib@ gmail.com</p>
-                            </div>
-                        </div>
+                                <p>beastxfitness@gmail.com</p>
+                            </div><hr>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>

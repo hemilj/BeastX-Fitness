@@ -27,7 +27,7 @@ include("header.php");
                 <div class="breadcrumb-text">
                     <h2>Trainer</h2>
                     <div class="breadcrumb-option">
-                        <a href="index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="index.php"><i class="fa fa-home"></i> Home</a>
                         <span>Trainer</span>
                     </div>
                 </div>
@@ -48,110 +48,29 @@ include("header.php");
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-trainer-item">
-                    <img src="img/trainer/trainer-1.jpg" alt="">
-                    <div class="trainer-text">
-                        <h5>Patrick Cortez</h5>
-                        <span>Leader</span>
-                        <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                            voluptatem.</p>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
+            <?php
+            include("../admin/pages/connectdb.php");
+            $q = "select * from trainer_master";
+            $result = mysqli_query($conn, $q);
+            while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <div class="col-lg-4 col-md-6" style="margin-top: 115px;">
+                    <div class="single-trainer-item">
+                        <img src="../admin/pages/images/trainer/<?php echo $row['photo'] ?>" alt="">
+                        <div class="trainer-text">
+                            <h5><?php echo $row['tname']?></h5>
+                            <span><?php echo $row['trole']?></span>
+                            <p><?php echo $row['tdesc']?></p>
+                            <div class="trainer-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-trainer-item">
-                    <img src="img/trainer/trainer-2.jpg" alt="">
-                    <div class="trainer-text">
-                        <h5>Gregory Powers</h5>
-                        <span>Gym coach</span>
-                        <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                            voluptatem.</p>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-trainer-item">
-                    <img src="img/trainer/trainer-3.jpg" alt="">
-                    <div class="trainer-text">
-                        <h5>Walter Wagner</h5>
-                        <span>Dance trainer</span>
-                        <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                            voluptatem.</p>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="margin-top: 115px;">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-trainer-item">
-                    <img src="img/trainer/trainer-4.jpg" alt="">
-                    <div class="trainer-text">
-                        <h5>Ava Megan</h5>
-                        <span>Yoga specialist</span>
-                        <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                            voluptatem.</p>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-trainer-item">
-                    <img src="img/trainer/trainer-5.jpg" alt="">
-                    <div class="trainer-text">
-                        <h5>Oliver Jake</h5>
-                        <span>Athletic trainer</span>
-                        <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                            voluptatem.</p>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-trainer-item">
-                    <img src="img/trainer/trainer-6.jpg" alt="">
-                    <div class="trainer-text">
-                        <h5>Emily Elizabeth</h5>
-                        <span>Sports coach</span>
-                        <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                            voluptatem.</p>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </section>

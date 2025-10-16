@@ -41,19 +41,19 @@
             <div class="col-md-4">
                 <div class="contact-option">
                     <span>Phone</span>
-                    <p>(123) 118 9999 - (123) 118 9999</p>
+                    <p>+91 987456321</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-option">
                     <span>Address</span>
-                    <p>72 Kangnam, 45 Opal Point Suite 391</p>
+                    <p>BeastX Fitness,Opp.Jalaram Restaurant , Udhna .</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-option">
                     <span>Email</span>
-                    <p>contactcompany@Gutim.com</p>
+                    <p>beastxfitness@gmail.com</p>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
                     document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+                </script> All rights reserved 
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </p>
             <div class="footer-social">

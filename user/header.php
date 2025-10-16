@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&amp;display=swap"
     rel="stylesheet">
 
@@ -65,6 +66,50 @@
     .brand-highlight {
         color: #ff4d4d;
     }
+
+    .dropdown-menu {
+        display: block !important;
+        position: absolute !important;
+        background: #fff;
+        z-index: 9999;
+        padding: .5rem !important;
+    }
+
+    .signout-btn {
+        display: inline-block;
+        background: #ff4d4d;
+        color: #fff !important;
+        padding: 8px 18px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        width: 110px !important;
+    }
+
+    .signout-btn:hover {
+        background: #e04343;
+        color: #fff !important;
+        text-decoration: none;
+    }
+
+    .uname-text {
+        cursor: pointer;
+    }
+
+    .uname-text > span {
+        margin-left: 12px;
+    }
+
+    .i:hover {
+        color: #ff4d4d !important;
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block !important;  
+    }
 </style>
 
 <header class="header-section">
@@ -85,10 +130,49 @@
                     <button type="button" class="btn custom-btn">
                         <i class="bi bi-cart"></i> Cart
                     </button>
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <div class="dropdown" style="display:inline-block; margin-left:15px;">
+
+                            <span class="primary-btn signup-btn uname-text" onclick="toggleLogout()"><?php echo htmlspecialchars($_SESSION['username']); ?>
+                                <span class="uname-icon" id="openIcon">
+                                    <i class="bi bi-box-arrow-down"></i>
+                                </span>
+                                <span class="uname-icon" visible="false" id="closeIcon" style="display:none;">
+                                    <i class="bi bi-x"></i>
+                                </span>
+                            </span>
+                            <!-- Dropdown Menu -->
+                            <div id="logoutBox" style="display:none;">
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenuButton">
+                                    <a href="logout.php" class="primary-btn signout-btn"><i class="bi bi-box-arrow-right"></i> Log out</a>
+                                </ul>
+                            </div>
+                        </div>
+                    <?php else: ?>
+                        <!-- Show login button if not logged in -->
+                        <a href="login.php" class="primary-btn signup-btn">Log in</a>
+                    <?php endif; ?>
                 </ul>
             </nav>
-            <a href="login.php" class="primary-btn signup-btn">Log in</a>
         </div>
         <div id="mobile-menu-wrap"></div>
     </div>
 </header>
+
+<script>
+    function toggleLogout() {
+        var box = document.getElementById('logoutBox');
+        box.style.display = box.style.display === 'none' ? 'block' : 'none';
+
+        var closeIcon = document.getElementById('closeIcon');
+        var openIcon = document.getElementById('openIcon');
+        if (box.style.display === 'block') {
+            closeIcon.style.display = 'inline';
+            openIcon.style.display = 'none';
+        } else {
+            closeIcon.style.display = 'none';
+            openIcon.style.display = 'inline';
+        }
+
+    }
+</script>
