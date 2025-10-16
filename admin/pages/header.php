@@ -1,3 +1,5 @@
+<!doctype html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 <html lang="en" data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-direction="ltr" dir="ltr" data-pc-theme="light">
   <!-- [Head] start -->
 
@@ -5,7 +7,7 @@
 <!-- Mirrored from themewagon.github.io/DattaAble/dashboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Jun 2025 05:41:01 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-    <title>Home | Datta Able Dashboard Template</title>
+    <title>BeastX Fitness</title>
     <!-- [Meta] -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
@@ -54,10 +56,9 @@
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
     <div class="m-header flex items-center py-4 px-6 h-header-height">
-      <a href="index.php" class="b-brand flex items-center gap-3">
-        <!-- ========   Change your logo from here   ============ -->
-        <img src="https://themewagon.github.io/DattaAble/assets/images/logo-white.svg" class="img-fluid logo logo-lg" alt="logo" />
-        <img src="https://themewagon.github.io/DattaAble/assets/images/favicon.svg" class="img-fluid logo logo-sm" alt="logo" />
+      <a href="index.html" class="b-brand flex items-center gap-3">
+        <!-- ========   Ch  ange your logo from here   ============ -->
+        <img src="../assets/images/user/avatar-4.jpg" class="img-fluid logo logo-lg" alt="logo" />
       </a>
     </div>
     <div class="navbar-content h-[calc(100vh_-_74px)] py-2.5">
@@ -77,8 +78,8 @@
         <!-- <li class="pc-item pc-caption">
           <label>UI Components</label>
           <i data-feather="feather"></i>
-        </li> -->
-        <!-- <li class="pc-item pc-hasmenu">
+        </li>
+        <li class="pc-item pc-hasmenu">
           <a href="https://themewagon.github.io/DattaAble/elements/bc_color.html" class="pc-link">
             <span class="pc-micon"> <i data-feather="edit"></i></span>
             <span class="pc-mtext">Color</span>
@@ -114,61 +115,27 @@
           </a>
         </li> -->
         <li class="pc-item pc-caption">
-          <label>Other</label>
+          <label>Pages</label>
           <i data-feather="sidebar"></i>
         </li>
         <li class="pc-item pc-hasmenu">
           <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="align-right"></i> </span><span
               class="pc-mtext">Category</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="catagory.php">ADD</a></li>
-            <!-- <li class="pc-item pc-hasmenu"> -->
-              <a href="view.php" class="pc-link">VIEW</a>
-              <!-- <span class="pc-arrow"><i class="ti ti-chevron-right"></i></span> -->
-              <!-- <ul class="pc-submenu">
-                <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
-                <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
-                <li class="pc-item pc-hasmenu">
-                  <a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
-                  <ul class="pc-submenu">
-                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
-                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                  </ul>
-                </li>
-              </ul> -->
-            <!-- </li>
+            <li class="pc-item"><a class="pc-link" href="catagory.php">Add</a></li>
             <li class="pc-item pc-hasmenu">
-              <a href="#!" class="pc-link">Level 2.3<span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
-              <ul class="pc-submenu">
-                <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
-                <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
-                <li class="pc-item pc-hasmenu">
-                  <a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
-                  <ul class="pc-submenu">
-                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
-                    <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                  </ul>
-                </li>
+              <a href="view.php" class="pc-link">View</a>
               </ul>
-            </li>
-          </ul>
-        </li> -->
-        <!-- <li class="pc-item">
-          <a href="https://themewagon.github.io/DattaAble/other/sample-page.html" class="pc-link">
-            <span class="pc-micon">
-              <i data-feather="sidebar"></i>
-            </span>
-            <span class="pc-mtext">Sample page</span>
-          </a>
-        </li> -->
+        </li>
         <li class="pc-item pc-hasmenu">
           <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="align-right"></i> </span><span
               class="pc-mtext">Product</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="p_add.php">ADD</a></li>
-            <!-- <li class="pc-item pc-hasmenu"> -->
-              <a href="p_view.php" class="pc-link">VIEW</a>
-              <!-- <span class="pc-arrow"><i class="ti ti-chevron-right"></i></span> -->
+            <li class="pc-item"><a class="pc-link" href="p_add.php">Add</a></li>
+            <li class="pc-item pc-hasmenu">
+              <a href="p_view.php" class="pc-link">View</a>
+              </ul>
+        </li>
               <!-- <ul class="pc-submenu">
                 <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
                 <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
@@ -177,11 +144,11 @@
                   <ul class="pc-submenu">
                     <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
                     <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                  </ul>
-                </li>
-              </ul> -->
-            <!-- </li>
-            <li class="pc-item pc-hasmenu">
+                  </ul> -->
+                <!-- </li> -->
+              <!-- </ul>
+            </li> -->
+            <!-- <li class="pc-item pc-hasmenu">
               <a href="#!" class="pc-link">Level 2.3<span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
               <ul class="pc-submenu">
                 <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
@@ -194,17 +161,26 @@
                   </ul>
                 </li>
               </ul>
-            </li>
-          </ul>
-        </li> -->
-        <!-- <li class="pc-item">
-          <a href="https://themewagon.github.io/DattaAble/other/sample-page.html" class="pc-link">
-            <span class="pc-micon">
-              <i data-feather="sidebar"></i>
-            </span>
-            <span class="pc-mtext">Sample page</span>
-          </a>
-        </li> -->
+            </li> -->
+          
+        <li class="pc-item pc-hasmenu">
+          <a href="#" class="pc-link"><span class="pc-micon"> <i data-feather="align-right"></i> </span><span
+              class="pc-mtext">User</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
+          <ul class="pc-submenu">
+            <li class="pc-item"><a class="pc-link" href="currentuser.php">Current User</a></li>
+            <li class="pc-item pc-hasmenu">
+              <a href="blockeduser.php" class="pc-link">Blocked User</a>
+              </ul>
+        </li>
+        <li class="pc-item pc-hasmenu">
+          <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="align-right"></i> </span><span
+              class="pc-mtext">Trainer</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
+          <ul class="pc-submenu">
+            <li class="pc-item"><a class="pc-link" href="trainer.php">Add</a></li>
+            <li class="pc-item pc-hasmenu">
+              <a href="trainerview.php" class="pc-link">View</a>
+              </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -227,10 +203,7 @@
       </a>
     </li>
     <li class="dropdown pc-h-item">
-      <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
-        aria-haspopup="false" aria-expanded="false">
-        <i data-feather="search"></i>
-      </a>
+    
       <div class="dropdown-menu pc-h-dropdown drp-search">
         <form class="px-2 py-1">
           <input type="search" class="form-control !border-0 !shadow-none" placeholder="Search here. . ." />
@@ -289,7 +262,7 @@
           <span>Logout</span>
         </a>
       </div>
-    </li>
+    <!-- </li>
     <li class="dropdown pc-h-item">
       <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" aria-expanded="false">
@@ -399,7 +372,7 @@
           </a>
         </div>
       </div>
-    </li>
+    </li> -->
     <li class="dropdown pc-h-item header-user-profile">
       <a class="pc-head-link dropdown-toggle arrow-none me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" data-pc-auto-close="outside" aria-expanded="false">
@@ -458,22 +431,8 @@
   </ul>
 </div></div>
 </header>
-
-    <!-- [ Main Content ] start -->
+<!-- [ Main Content ] start -->
     <div class="pc-container">
       <div class="pc-content">
-        <!-- [ breadcrumb ] start -->
-        <div class="page-header">
-          <div class="page-block">
-            <div class="page-header-title">
-              <h5 class="mb-0 font-medium">Default</h5>
-            </div>
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
-              <li class="breadcrumb-item" aria-current="page">Default</li>
-            </ul>
-          </div>
-        </div>
-        <!-- [ breadcrumb ] end -->
+        
 </div>

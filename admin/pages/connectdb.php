@@ -1,3 +1,3 @@
 <?php
-$conn = mysqli_connect("localhost:3307", "root", "", "project_php") or die("not connected");
+$conn = mysqli_connect("localhost:3307", "root", "", "php_project") or die("not connected");
 ?>

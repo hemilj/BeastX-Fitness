@@ -25,44 +25,68 @@
       <div class="col-md-6">
         <div class="card shadow-lg">
           <div class="card-header text-center bg-dark text-white">
-            <h4>Add Product</h4>
+            <h4>Add Trainer</h4>
           </div>
           <div class="card-body">
             <?php 
               include("connectdb.php");
               if(isset($_POST['btnsubmit']))
               {
-                $name=$_POST['txtname'];
+                $name=$_POST['txtname'];           
+                $desc=$_POST['txtdesc'];           
+                $role=$_POST['txtrole'];           
                 $photo=$_FILES['txtphoto']['name'];
-                $dst="./images/".$photo;
-                $q=mysqli_query($conn,"insert into catagory_master values('','$name','$photo',0)");
+                $dst="./images/trainer/".$photo;
+                $q=mysqli_query($conn,"insert into trainer_master values('','$name','$desc','$role','$photo')");
                 if($q)
                 {
                   move_uploaded_file($_FILES['txtphoto']['tmp_name'],$dst);
-                  echo "Inserted...";
+                  echo "<script>alert('Inserted...')</script>";
                 }else
-                  echo "Not Inserted....";
+                  echo "<script>alert('Not Inserted....')</script>";
               }
             ?>
             <form id="categoryForm" method="post" enctype="multipart/form-data">
               <div class="mb-3">
-                <label for="categoryName" class="form-label">Category Name</label>
+                <label for="Trainername" class="form-label">Trainer Name</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="categoryName"
+                  id="trainerid"
                   name="txtname"
-                  placeholder="Enter category name"
+                  placeholder="Enter Trainer name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="Trainerdesc" class="form-label">Trainer Description</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  id="trainerdesc"
+                  name="txtdesc"
+                  placeholder="Enter Trainer Description"
+                  required
+                ></textarea>
+              </div>
+            <div class="mb-3">
+                <label for="Trainerrole" class="form-label">Trainer Role</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="trainerrole"
+                  name="txtrole"
+                  placeholder="Enter Trainer Role"
                   required
                 />
               </div>
 
               <div class="mb-3">
-                <label for="categoryPhoto" class="form-label">Category Photo</label>
+                <label for="TrainerPhoto" class="form-label">Trainer Photo</label>
                 <input
                   type="file"
                   class="form-control"
-                  id="categoryPhoto"
+                  id="TrainerPhoto"
                   name="txtphoto"
                   accept="image/*"
                   required
