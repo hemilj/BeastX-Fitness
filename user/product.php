@@ -120,20 +120,12 @@ include("header.php");
             <!-- Fetch Products -->
             <?php
             include("../admin/pages/connectdb.php");
-            $catname = "";
             $q = mysqli_query($conn, "select * from product_master");
             while ($row = mysqli_fetch_array($q)) {
-                if ($row['cid'] == 1) {
-                    $catname = "Protein-Powders";
-                } elseif ($row['cid'] == 2) {
-                    $catname = "Gym-Equipment";
-                } else {
-                    $catname = "Gym-Apparel";
-                }
             ?>
                 <div class="col-md-4">
                     <div class="card p-4 prdts h-90">
-                        <img src="../admin/pages/images/product/<?php echo $catname; ?>/<?php echo $row['photo'] ?>">
+                        <img src="../admin/pages/images/product/<?php echo $row['photo'] ?>">
                         <div class="card-body text-center d-flex flex-column">
                             <div class="price"><span>₹</span><?php echo $row['rate'] ?></div>
                             <h5 class="card-title"><?php echo $row['pname'] ?></h5>
